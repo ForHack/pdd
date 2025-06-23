@@ -1,4 +1,5 @@
 import Image from "next/image"
+import Link from "next/link"
 
 const Header = () => {
   return (
@@ -6,7 +7,9 @@ const Header = () => {
          {/* Header */}
          <header className="bg-white rounded-2xl shadow flex items-center px-8 py-3">
           <div className="font-bold text-xl mr-12">
-            <Image src="/images/logo.png" alt="Lozo" width={100} height={70} />
+            <Link href="/">
+              <Image src="/images/logo.png" alt="Lozo" width={100} height={70} />
+            </Link>
           </div>
           <nav className="flex-1">
             <ul className="flex gap-8 text-base font-medium text-gray-800">
