@@ -183,21 +183,6 @@ export default function SignPage() {
           <div className="text-green-700">{sign.testExample.answer}</div>
         </section>
 
-        {/* Похожие знаки */}
-        <section className="bg-white rounded-2xl shadow p-8 mb-8">
-          <h2 className="text-xl font-semibold mb-4">Похожие знаки</h2>
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
-            {sign.similar.map((s) => (
-              <Link key={s.slug} href={`/signs/${s.slug}`}>
-                <div className="flex flex-col items-center p-4 border border-gray-200 rounded-lg bg-white hover:shadow transition cursor-pointer">
-                  <Image src={s.image} alt={s.name} width={66} height={66} />
-                  <span className="mt-2 text-base text-gray-800 text-center">{s.name}</span>
-                </div>
-              </Link>
-            ))}
-          </div>
-        </section>
-
         {/* Другие знаки с выделением активного */}
         <section className="bg-white rounded-2xl shadow p-8 mb-8">
           <h2 className="text-xl font-semibold mb-4">Другие знаки</h2>
